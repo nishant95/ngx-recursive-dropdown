@@ -2,7 +2,22 @@ import { Component, OnInit, ChangeDetectorRef, Input, Output, EventEmitter } fro
 
 @Component({
   selector: 'ngx-recursive-dropdown',
-  templateUrl: './ngx-recursive-dropdown.component.html',
+  template:  `<ng-container *ngTemplateOutlet="testTemplate;context:{ listTest: baseList}">
+              </ng-container>
+              <ng-template #testTemplate let-list="listTest">
+                <select #selectElem (change)="detectChanges(list[selectElem.value])">
+                  <option [value]="-1">
+                    --Select--
+                  </option>
+                  <option *ngFor="let x of list;let i=index" [value]="i">
+                    <span *ngIf="x[displayLabel]">{{x[displayLabel]}}</span>
+                  </option>
+                </select>
+              
+                <div *ngIf="list && list[selectElem.value] && list[selectElem.value][childListName]">
+                  <ng-container *ngTemplateOutlet="testTemplate;context:{listTest: list[selectElem.value][childListName]}"></ng-container>
+                </div>
+              </ng-template>`,
   styleUrls: []
 })
 export class NgxRecursiveDropdownComponent implements OnInit {
