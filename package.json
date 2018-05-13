@@ -1,6 +1,6 @@
 {
   "name": "ngx-recursive-dropdown",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "A dropdown list using ng-template and ng-container in a recursive manner.",
   "main": "ngx-recursive-dropdown.umd.js",
   "jsnext:main": "ngx-recursive-dropdown.esm.js",
@@ -22,6 +22,7 @@
     "treeview",
     "angular"
   ],
+  "homepage": "https://github.com/nishant95/ngx-recursive-dropdown#readme",
   "dependencies": {
     "@angular/compiler": "^4.0.3",
     "@angular/core": "^4.1.0",
