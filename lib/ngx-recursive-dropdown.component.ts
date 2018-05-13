@@ -14,30 +14,17 @@ export class NgxRecursiveDropdownComponent implements OnInit {
 
   constructor(private ref: ChangeDetectorRef) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
-print(selectElem){
-    console.log(selectElem);
-    console.log(selectElem.value);
-  }
+  finalResult = null;
 
-  finalResult = {
-    value: 'khali'
-  };
-
-  detectChanges(obj){
+  detectChanges(obj: any) {
     this.ref.detectChanges();
-    if(obj){
-    this.finalResult = obj;
-    this.lastSelected.emit(this.finalResult);
-    }else{
-    this.lastSelected.emit(null);
+    if (obj) {
+      this.finalResult = obj;
+      this.lastSelected.emit(this.finalResult);
+    } else {
+      this.lastSelected.emit(null);
     }
   }
-
-	preventClick(event){
-event.stopPropagation()
-		debugger;
-	}
 }

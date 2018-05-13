@@ -41,3 +41,9 @@ typings/
 
 # Optional npm cache directory
 .npm
+
+*.d.ts
+*.js.map
+*.ngsummary.json
+*.ngfactory.ts
+dist/

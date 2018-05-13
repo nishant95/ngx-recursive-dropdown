@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NgxRecursiveDropdownComponent } from './ngx-recursive-dropdown/ngx-recursive-dropdown.component';
+import { NgxRecursiveDropdownComponent } from './ngx-recursive-dropdown.component';
 
 @NgModule({
     imports:[
