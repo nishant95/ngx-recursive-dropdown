@@ -1,7 +1,7 @@
 {
   "name": "ngx-recursive-dropdown",
   "version": "1.0.0",
-  "description": "",
+  "description": "A dropdown list using ng-template and ng-container in a recursive manner.",
   "main": "ngx-recursive-dropdown.umd.js",
   "jsnext:main": "ngx-recursive-dropdown.esm.js",
   "module": "ngx-recursive-dropdown.esm.js",
@@ -12,8 +12,8 @@
     "postbundle": "node tools/removecode.js",
     "build": "npm run bundle && npm run copy"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Nishant Hooda <hoodanishant1995@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@angular/compiler": "^4.0.3",
     "@angular/core": "^4.1.0",
